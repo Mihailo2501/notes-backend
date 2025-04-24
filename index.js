@@ -6,6 +6,7 @@ const app = express();
 
 // JSON parser
 // Takes the JSON data of a reqeust transform it into a JS object
+app.use(express.static('dist'));
 app.use(express.json());
 app.use(cors());
 app.use(morgan('tiny'));
