@@ -1,11 +1,14 @@
 const express = require('express');
 const cors = require('cors');
+const morgan = require('morgan');
+
 const app = express();
 
 // JSON parser
 // Takes the JSON data of a reqeust transform it into a JS object
 app.use(express.json());
 app.use(cors());
+app.use(morgan('tiny'));
 
 let notes = [
   {
